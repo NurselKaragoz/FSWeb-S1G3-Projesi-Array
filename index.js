@@ -39,14 +39,9 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
    2. Alınan dizinin bir kopyasını döndür
 */
 
-function kopyala(/*kod buraya*/) {
-  const tatlar = [];
-  for (i = 0; i < 25; i++) {
-    tatlar[i] = orijinalTatlar[i];
-  }
-  return tatlar;
-  console.log(kopyala);
-  /*kod buraya*/
+function kopyala() {
+  const copy = [...orijinalTatlar];
+  return copy;
 }
 /* Görev 2:
 Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları kabul etmelidir:
@@ -58,9 +53,43 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 Örneğin: dizi25Cesit(orijinalTatlar) kodunuz düzgün çalışıyorsa true değerini döndürür.
 */
 
-function dizi25Cesitmi(/*kod buraya*/) {
-  /*kod buraya*/
+// const orijinalTatlar = [
+//   "Muz",
+//   "Vişne",
+//   "Ceviz",
+//   "Kestane",
+//   "Kiraz",
+//   "Çikolata",
+//   "Fındık Çikolata",
+//   "Fıstık Çikolata",
+//   "Badem Çikolata",
+//   "Franbuaz",
+//   "Yaban Mersini",
+//   "Tarçın",
+//   "Badem",
+//   "Kahve",
+//   "Fındık",
+//   "Anten Fıstık",
+//   "Limon",
+//   "Misket Limon",
+//   "Akçaağaç Şurubu",
+//   "Şeftali",
+//   "Nane",
+//   "Ananas",
+//   "Ahududu",
+//   "Çilek",
+//   "Vanilya",
+// ];
+let length = orijinalTatlar.length;
+function dizi25Cesitmi(uzunluk) {
+  if (length == uzunluk) {
+    console.log("DOĞRU");
+  } else {
+    console.log("YANLIŞ");
+  }
+  return;
 }
+console.log(dizi25Cesitmi(25));
 
 /* Görev 3:
 Pastane sahibi size yeni bir lezzet fikriyle geldi: Kakule! Bunun da çok tutacağından çok emin. Bu lezzeti eklemek için diziyi değiştirmeniz gerekir.
@@ -74,9 +103,12 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
   Örneğin: cesitEkle(orijinalTatlar, "Kakule") işlevi doğru çalıştığında ["Kakule", "Muz",..."Vanilya"] şeklinde dönmelidir
 */
 
-function cesitEkle(/*kod buraya*/) {
-  /*kod buraya*/
+string = [...orijinalTatlar];
+function cesitEkle(yenicesit) {
+  orijinalTatlar.unshift(yenicesit);
+  return orijinalTatlar;
 }
+console.log(cesitEkle("Kakule"));
 
 /* Cörev 4:
 
